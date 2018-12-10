@@ -27,13 +27,23 @@ const handleFetchLeaderboard = function(req, res) {
   //
   // TODO
   //
+  res.json(leaderboard.getLeaderBoard());
+  /*
   res.json([{
     name: 'Not a real player',
     wins: 1000,
     losses: 0,
     ties: 0,
     winPercentage: '100.00',
+  },
+  {
+    name: 'Not a real playerB',
+    wins: 1,
+    losses: 99,
+    ties: 0,
+    winPercentage: '1.00',
   }]);
+  */
 };
 
 module.exports = {
