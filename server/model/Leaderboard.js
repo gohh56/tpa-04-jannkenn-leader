@@ -28,7 +28,12 @@ class Leaderboard {
       player = this.leadersMap[name];
     } else {
       player = new Player(name);
+      this.leadersMap[name] = player;
+      this.leadersArray.push(this.leadersMap[name]);
     }
+    player.updateStats(winStatus);
+
+    this.leadersArray.sort((a, b) => b.winPercentage - a.winPercentage);
   }
 
   getLeaderBoard() {
